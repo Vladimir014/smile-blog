@@ -24,12 +24,8 @@ header nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
-    font-weight: bold;
     font-family: 'Montserrat', sans-serif;
-}
-
-header nav a:hover {
-    text-decoration: underline;
+    font-weight: 700;
 }
 
 /* Главный баннер */
@@ -48,6 +44,7 @@ header nav a:hover {
 
 .banner p {
     font-size: 18px;
+    font-family: 'Roboto', sans-serif;
     margin-top: 10px;
 }
 
@@ -70,6 +67,7 @@ header nav a:hover {
 .services li {
     margin: 10px 0;
     font-weight: 500;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Футер */
@@ -85,4 +83,3 @@ footer a {
     color: #78C2D7;
     text-decoration: none;
 }
-
