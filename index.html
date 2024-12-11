@@ -1,70 +1,206 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Советы по управлению блогами, стратегии роста и развитию личного бренда.">
+    <meta name="keywords" content="блог, личный бренд, контент-стратегии, менеджмент">
+    <meta name="author" content="Команда Все получится">
+    <title>Все получится - Блог и стратегии роста</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .content-section {
+            margin-bottom: 40px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .blog-category {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .category-card {
+            flex: 1 1 calc(33.333% - 30px);
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        .category-card h3 {
+            margin-top: 0;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #45a049;
+        }
+        .newsletter {
+            background-color: #e8f5e9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = form.querySelector('input[type="email"]').value;
+                if (validateEmail(email)) {
+                    alert('Спасибо за подписку!');
+                    form.reset();
+                } else {
+                    alert('Пожалуйста, введите корректный email.');
+                }
+            });
+        });
 
-.montserrat-<uniquifier> {
-  font-family: "Montserrat", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+    </script>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>SMILE</h1>
-            <p>Улыбайся и все получится!</p>
-        </div>
-        <nav>
-            <a href="#why">Почему мы?</a>
-            <a href="#bloggers">Блогеры</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
+        <h1>Все получится</h1>
+        <p>Добро пожаловать! Найдите советы и стратегии для вашего блога.</p>
     </header>
-
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#blog">Блог</a>
+        <a href="#management">Управление блогом</a>
+        <a href="#resources">Ресурсы</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
     <main>
-        <!-- Главный баннер -->
-        <section class="banner">
-            <div class="banner-text">
-                <h2>Создайте успешную рекламу с нами!</h2>
-                <p>Мы поможем найти подходящего блогера и сделать вашу кампанию незабываемой.</p>
-
-        <!-- Почему мы? -->
-        <section id="why" class="features">
-            <h2>Почему выбирают нас?</h2>
-            <div class="feature-cards">
-                <div class="feature-card">
-                    <h3>Экономим ваше время</h3>
-                    <p>Мы берем весь цикл на себя: от выбора блогеров до статистики.</p>
+        <section id="home" class="content-section">
+            <h2>О нашем сайте</h2>
+            <p>На сайте "Все получится" вы найдете полезные материалы о стратегиях роста, контент-планировании и создании личного бренда.</p>
+        </section>
+        <section id="blog" class="content-section">
+            <h2>Последние статьи</h2>
+            <div class="blog-category">
+                <div class="category-card">
+                    <h3>Как развивать блог</h3>
+                    <p>Советы и примеры успешных стратегий.</p>
+                    <a href="#" class="btn">Читать</a>
                 </div>
-                <div class="feature-card">
-                    <h3>Широкий выбор</h3>
-                    <p>Сотрудничаем с более чем 1000 блогеров, включая звёзд.</p>
+                <div class="category-card">
+                    <h3>Контент-планирование</h3>
+                    <p>Создайте план для регулярных публикаций.</p>
+                    <a href="#" class="btn">Читать</a>
                 </div>
-                <div class="feature-card">
-                    <h3>Контроль качества</h3>
-                    <p>Гарантируем, что кампания будет соответствовать вашим ожиданиям.</p>
+                <div class="category-card">
+                    <h3>Интервью с экспертами</h3>
+                    <p>Истории успеха известных блогеров.</p>
+                    <a href="#" class="btn">Читать</a>
                 </div>
             </div>
         </section>
-
-        <!-- Блогеры -->
-        <section id="bloggers" class="bloggers">
-            <h2>Наши блогеры</h2>
-            <p>Охваты от 1k до 6 млн. Мы подберем подходящего для вас!</p>
-            <!-- Здесь можно добавить больше информации о блогерах -->
+        <section id="management" class="content-section">
+            <h2>Управление блогом</h2>
+            <ul>
+                <li><a href="#">Стратегии контент-планирования</a></li>
+                <li><a href="#">Продвижение в соцсетях</a></li>
+                <li><a href="#">Аналитика и изучение аудитории</a></li>
+                <li><a href="#">Советы по монетизации</a></li>
+            </ul>
+        </section>
+        <section id="resources" class="content-section">
+            <h2>Ресурсы</h2>
+            <p>Полезные инструменты для блогеров:</p>
+            <ul>
+                <li><a href="#">Рекомендуемые книги</a></li>
+                <li><a href="#">Курсы и вебинары</a></li>
+                <li><a href="#">Ссылки на полезные сайты</a></li>
+            </ul>
+        </section>
+        <section id="newsletter" class="content-section newsletter">
+            <h2>Подписка на новости</h2>
+            <p>Оставайтесь в курсе последних обновлений.</p>
+            <form class="contact-form">
+                <input type="email" placeholder="Ваш email" required>
+                <button type="submit">Подписаться</button>
+            </form>
+        </section>
+        <section id="contacts" class="content-section">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами для сотрудничества или партнёрства:</p>
+            <p>Телефон: +7 913 003 9956</p>
+            <p>Email: vse_polu4@internet.ru</p>
         </section>
     </main>
-
-    <footer id="contacts">
-        <div class="footer-container">
-            <h2>Контакты</h2>
-            <p><strong>Email:</strong> popelnickaya_uliya@mail.ru</p>
-            <p><strong>Telegram:</strong> <a href="https://t.me/Popelnitskaya_Uliya">Popelnitskaya_Uliya</a></p>
-            <p><strong>WhatsApp:</strong> <a href="https://wa.me/79538089710">+7 953 808 9710</a></p>
-        </div>
+    <footer>
+        <p>&copy; 2024 Все получится! Все права защищены.</p>
     </footer>
 </body>
 </html>
